@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ClientPropertyEndpoint;
+
+service ClientProperty {
+	rpc GetProperty (PropertyRequest) returns (PropertyReply) {}
+}
+
+message PropertyRequest {
+    string propertyId = 1;
+}
+
+message PropertyReply {
+    string clientName = 1;
+    string organisationName = 2;
+	string productName = 3;
+} 
