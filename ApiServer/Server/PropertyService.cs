@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 using ClientPropertyEndpoint;
 using MediatR;
-using System;
 
 namespace Server
 {

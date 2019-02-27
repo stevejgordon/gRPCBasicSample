@@ -8,14 +8,14 @@
 
   <ItemGroup>
     <Protobuf Include="..\..\Proto\*.proto" GrpcServices="Server" Generator="MSBuild:Compile" />
-
-    <None Remove="@(Protobuf)" />
     <Content Include="@(Protobuf)" LinkBase="" />
+  </ItemGroup>
     
-    <ProjectReference Include="..\..\Grpc.AspNetCore.Server\Grpc.AspNetCore.Server.csproj" />
-
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore.Server" Version="0.1.19-pre1" />
     <PackageReference Include="Google.Protobuf" Version="3.6.1" />
     <PackageReference Include="Grpc.Tools" Version="1.19.0-pre1" PrivateAssets="All" />
+    
     <PackageReference Include="MediatR" Version="6.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="6.0.1" />
   </ItemGroup>
